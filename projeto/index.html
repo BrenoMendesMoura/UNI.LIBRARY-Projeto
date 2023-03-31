@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNI.LIBRARY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="teste bg-dark"
+        style="background-image: linear-gradient(
+        to bottom,
+        rgba(32,32,32,.8) 0%,
+        rgba(32, 32, 32, 0.2) 40%,
+        rgba(32, 32, 32, 0.2) 80%,
+        rgb(32, 32, 32) 100%
+    ),
+    url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTdhYWUwMmY5NWU1OWJmOTRjY2IzMDBkNDNkNWM2YzdjNTk4MDU2OCZjdD1n/KUsBAKV7zBoc1rADlQ/giphy.gif);">
+        <!--Inicio do hero-->
+        <div class="hero">
+
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" style="margin-top: 3%;">UNI.LIBRARY</a>
+                    <form class="d-flex" role="search" id="search_form" style="margin-top: 3%;">
+                        <input class="form-control me-2" type="search" placeholder="Anime" aria-label="Search"
+                            name="search" id="search">
+                        <label class="btn btn-outline-dark" type="submit" for="search"><i
+                                class="fa fa-search"></i></label>
+                    </form>
+                </div>
+            </nav>
+
+
+            <div class="overflow-auto text-white" style="margin-top: 10%;">
+                <p style="font-size:40px">Explore o universo dos animes com nossa<br> biblioteca digital especializada
+                </p>
+                <p style="font-size:25px;margin-top: 3%;">Milhares de títulos disponíveis para leitura em qualquer
+                    lugar, a qualquer hora.</p>
+                <button type="button" class="btn btn-dark" style="opacity: 75%;">Assistir</button> <button type="button"
+                    class="btn btn-dark" style="opacity: 75%;">Minha lista</button>
+            </div>
+
+            <div class="category" style="margin-top: 13rem; margin-bottom: 23rem;">
+                <span>Em alta</span>
+                <div class="slider mb-2" id="videos" style="margin-bottom: 6rem;">
+                    <script>
+                        fetch(`https://api.jikan.moe/v4/watch/promos/popular`)
+                            .then((data) => {
+                                return data.json();
+                            })
+                            .then((completedata) => {
+                                console.log(completedata);
+                                let data1 = "";
+                                completedata.data.slice(2, 14).map((rec) => {
+                                    data1 += `<iframe class="video" width="860px" height="315px" src="https:\/\/www.youtube.com\/embed\/${rec.trailer.youtube_id}?enablejsapi=1&wmode=opaque&autoplay=0"  frameborder="0" allowfullscreen></iframe>`
+                                });
+                                document.getElementById("videos").innerHTML = data1;
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+                    </script>
+                </div>
+            </div> <!-- Fechamento das categorias -->
+
+            <div class="category">
+                <span>Episódios populares</span>
+                <div class="slider" id="populares">
+                    <script>
+                        fetch(`https://api.jikan.moe/v4/watch/episodes/popular`)
+                            .then((data) => {
+                                return data.json();
+                            })
+                            .then((completedata) => {
+                                console.log(completedata.data);
+                                let data1 = "";
+                                completedata.data.map((data) => {
+                                    if (!data.region_locked) { // Verifica se "region_locked" é false
+                                        data1 += `<a href="${data.episodes[0].url}" class="imagem">
+                    <img class="movie" src="${data.entry.images.jpg.large_image_url}"  style="margin-bottom:1rem" alt="...">
+                  </a>`;
+                                    }
+                                });
+                                document.getElementById("populares").innerHTML = data1;
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+                    </script>
+                </div>
+            </div> <!-- Fechamento das categorias -->
+
+
+            <!-- categorias -->
+            <div class="category">
+                <span>Animes populares</span>
+
+                <div class="slider" id="show-results">
+                    <script>
+                        fetch(`https://api.jikan.moe/v4/top/anime`).then((data) => {
+                            //console.log(data);
+                            return data.json();
+
+                        }).then((completedata) => {
+
+                            //console.log(completedata.data);
+                            let data1 = "";
+
+
+                            completedata.data.slice(0, 25).map((values) => {
+                                data1 +=
+                                    `<a href="${values.url}" class="imagem">
+                                <img class="movie" src="${values.images.jpg.large_image_url}"  style="margin-bottom:1rem;" alt="..."></a>
+                              `
+                                // style="max-width: 45rem; max-height: 14rem;" type="button" class="card-img-top rounded-2 btn-transparent bg-transparent border-transparent mb-1"
+                            })
+
+                            document.getElementById('show-results').innerHTML = data1;
+                        }).catch((err) => {
+                            console.log(err);
+                        });
+
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="category">
+                <span>Mangás populares</span>
+
+                <div class="slider" id="show-mangá">
+                    <script>
+                        fetch(`https://api.jikan.moe/v4/top/manga`)
+                            .then((data) => {
+                                return data.json();
+                            })
+                            .then((completedata) => {
+                                let data1 = "";
+                                completedata.data.slice(0, 25).map((values) => {
+                                    data1 += `<a href="${values.url}" class="imagem">
+                <img class="movie" src="${values.images.jpg.large_image_url}" style="margin-bottom:1rem;" alt="..."></a>`;
+                                    // style="max-width: 45rem; max-height: 14rem;" type="button" class="card-img-top rounded-2 btn-transparent bg-transparent border-transparent mb-1"
+                                });
+                                document.getElementById("show-mangá").innerHTML = data1;
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="category" style="margin-top: 3rem; margin-bottom: 23rem;">
+                <span>Novidades</span>
+                <div class="slider mb-2" id="videos-2" style="margin-bottom: 6rem;">
+                    <script>
+                        fetch(`https://api.jikan.moe/v4/watch/promos/popular`)
+                            .then((data) => {
+                                return data.json();
+                            })
+                            .then((completedata) => {
+                                console.log(completedata);
+                                let data1 = "";
+                                completedata.data.slice(14, 30).map((rec) => {
+                                    data1 += `<iframe class="video" width="860px" height="315px" src="https:\/\/www.youtube.com\/embed\/${rec.trailer.youtube_id}?enablejsapi=1&wmode=opaque&autoplay=0"  frameborder="0" allowfullscreen="true"></iframe>`
+                                });
+                                document.getElementById("videos-2").innerHTML = data1;
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+                    </script>
+                </div>
+            </div> <!-- Fechamento das categorias -->
+
+            <div class="category">
+                <span>Mangás recomendados</span>
+                <div class="slider" id="show-manga-rec">
+                    <script>
+
+                        fetch(`https://api.jikan.moe/v4/manga/10/recommendations`)
+                            .then((data) => {
+                                return data.json();
+                            })
+                            .then((completedata) => {
+                                let data1 = "";
+                                completedata.data.slice(0, 25).map((rec) => {
+                                    data1 += `<a href="${rec.url}" class="imagem">
+                <img class="movie" src="${rec.entry.images.jpg.large_image_url}" style="margin-bottom:1rem;" alt="..."></a>`;
+                                });
+                                document.getElementById("show-manga-rec").innerHTML = data1;
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="category">
+                <span>Animes recomendados</span>
+                <div class="slider" id="ind">
+                    <button class="next-button">&#8250;</button>
+                    <script>
+                        fetch(`https://api.jikan.moe/v4/anime/1/recommendations`)
+                            .then((data) => {
+                                return data.json();
+                            })
+                            .then((completedata) => {
+                                let data1 = "";
+                                completedata.data.slice(0, 25).map((rec) => {
+                                    data1 += `<a href="${rec.url}" class="imagem">
+                <img class="movie" src="${rec.entry.images.jpg.large_image_url}" style="margin-bottom:1rem;" alt="..."></a>`;
+                                    // style="max-width: 45rem; max-height: 14rem;" type="button" class="card-img-top rounded-2 btn-transparent bg-transparent border-transparent mb-1" 
+                                });
+                                document.getElementById("ind").innerHTML = data1;
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+
+                    </script>
+                </div>
+            </div> <!-- Fechamento das categorias -->
+
+            <div class="teste-espaco overflow-auto">
+                <div class="category">
+                    <div class="slider-resultado" id="search-results-a">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultado mangá
+            <div class="category">
+                <div class="slider" id="search-results-m">
+                </div>
+            </div> -->
+
+
+
+
+
+
+    <!-- footer
+            <div class="container">
+            <div class="footer">
+                <div class="social">
+                    <i class="fas fa-facebook-square"></i>
+                    <i class="fas fa-instagram"></i>
+                    <i class="fas fa-twitter"></i>
+                    <i class="fas fa-youtube"></i>
+                </div>
+                <div class="flex">
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>Acesse a API</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>Acesse a API</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>Acesse a API</li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>Idioma e legendas</li>
+                            <li>Privacidade</li>
+                            <li>Entre em contato</li>
+                            <li>Acesse a API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+    <script src="./App.js"></script>
+</body>
+
+</html>
