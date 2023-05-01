@@ -65,7 +65,7 @@ request.send();
 }`
 ```
   
-|<br>
+<br>
 | Consequentemente deverá manipular essa informação e navegar utilizando .map para definir as variáveis que deverá aparecer no site.
 | <br>
 | Essa é uma das ideias iniciais ao desenvolver, uma maneira simples de explicar a requisição por trás,
