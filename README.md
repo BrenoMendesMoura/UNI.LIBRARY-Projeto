@@ -19,7 +19,11 @@ Período: Noturno <br>
 
 <hr>
 
-![image](https://user-images.githubusercontent.com/80074264/235514948-34384cef-9ea0-4742-8392-268ea729fb51.png)
+
+
+https://user-images.githubusercontent.com/80074264/235515739-305f4a94-2c43-413a-951c-af9a2d480297.mp4
+
+
 
 ## Descrição do Projeto
 UNI.LIBRARY, uma biblioteca digital especializada em Animes. Utilizando a mesma API do my anime list, realizamos requisições para que o usuário saiba as seguimentações e continuações dos animes que está sendo assistido. 
