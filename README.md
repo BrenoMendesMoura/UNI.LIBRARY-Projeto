@@ -65,11 +65,11 @@ request.send();
 }`
 ```
   
-<br>
+|<br>
 | Consequentemente deverá manipular essa informação e navegar utilizando .map para definir as variáveis que deverá aparecer no site.
- <br>
+| <br>
 | Essa é uma das ideias iniciais ao desenvolver, uma maneira simples de explicar a requisição por trás,
- <br>
+| <br>
 | Mas o script utilizado dentro do projeto vai um pouco além disso.
   
   
