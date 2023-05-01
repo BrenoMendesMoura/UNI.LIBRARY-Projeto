@@ -30,14 +30,14 @@ UNI.LIBRARY, uma biblioteca digital especializada em Animes. Utilizando a mesma 
   
  ### Idealização do projeto:
  O projeto foi idealizado no semestre passado, mas com requisições básicas e funcionalidades não tão exploradas. Nessa nova versão retornamos mais informações, mais funcionalidades e um front-end mais adequado ao tema proposto.
-  
-Funcionalidades adicionadas:
+<hr>
+####Funcionalidades adicionadas:
 - Adição de campo de pesquisa separado por categoria sem view_modal;
 - Adição de traillers para ilustrar o anime categorizado no youtube em 1080p;
 - Adição de um botão "Descubra" para retornar um anime aleatório;
 - Adição de slides e scrolls automáticos com a função "smooth" em javascript;
-  
-Alterações:
+<hr>
+####Alterações:
 - Alteramos o fundo e cor de determinados elementos, utilizamos o site [colorhunt](https://colorhunt.co/) para observarmos as tonalidades;
 - Alteramos todo o front end, desde o nav-bar até o footer. Montamos um front-end padronizado de acordo com o mercado de stream;
 
