@@ -30,7 +30,9 @@ UNI.LIBRARY, uma biblioteca digital especializada em Animes. Utilizando a mesma 
   
  ### Idealização do projeto:
  O projeto foi idealizado no semestre passado, mas com requisições básicas e funcionalidades não tão exploradas. Nessa nova versão retornamos mais informações, mais funcionalidades e um front-end mais adequado ao tema proposto.
+  
 <hr>
+  
 ####Funcionalidades adicionadas:
 - Adição de campo de pesquisa separado por categoria sem view_modal;
 - Adição de traillers para ilustrar o anime categorizado no youtube em 1080p;
