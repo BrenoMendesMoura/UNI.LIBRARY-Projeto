@@ -3,24 +3,29 @@
 <HR>
 
 # Dados da Turma <br>
-Dia da semana: Terça Feira <br>
+Dia da semana: Sexta Feira <br>
 Período: Noturno <br>
 
 ### Integrantes
 
 |RA| NOME COMPLETO| CURSO | TURMA |
 | ------------ | ------------ | ------------ | ------------ |
-|3021103570|Breno Mendes Moura|TADS|04A|
-|3021103830|Victor França de Souza|TADS|04A|
-|3021100282|Victor de souza bernardo|TADS|04A|
-|3021104031|Cesar Augusto Martins Vallim|TADS|04A|
-|3021103269|Elias Yuri Yoshy Miyashiro|TADS|04A|
+|3021103570|Breno Mendes Moura|TADS|05A|
+|3021100282|Victor de souza bernardo|TADS|05A|
+|3021104031|Cesar Augusto Martins Vallim|TADS|05A|
+|3021103269|Elias Yuri Yoshy Miyashiro|TADS|05A|
 
 
 <hr>
 
 ## Descrição do Projeto
-Tendo como objetivo principal, visamos uma criação de site com base em html. Temos como foco a criação de uma página de feedback de animes online, no qual, espectadores ao redor do mundo dariam a avaliação pessoal deles como base para futuros visualizadores interessados em tal Anime ou mangá
+UNI.LIBRARY, uma biblioteca digital especializada em Animes. Utilizando a mesma API do my anime list, realizamos requisições para que o usuário saiba as seguimentações e continuações dos animes que está sendo assistido. 
+  No site nós retornamos informações relevantes para o mundo GEEK, como por exemplo:
+  - EM ALTA, animes promovidos pela API e retornando em formato de vídeo;
+  - ANIMES POPULARES, retornando os 30 animes com mais membros no forum do my anime list;
+  - TOP 10 animes do momento;
+  - ANIMES RECOMENDADOS, animes com as melhores avaliações do my anime list;
+  - NOVIDADES, retornamos em formato de vídeo os animes recentes e mais visualizados do YOUTUBE.
 
 <hr>
   
@@ -59,6 +64,7 @@ request.send();
 }
 }`
 ```
+  
 <br>
  Consequentemente deverá manipular essa informação e navegar utilizando .map para definir as variáveis que deverá aparecer no site.
  <br>
@@ -68,4 +74,4 @@ request.send();
   
   
 
-### Endereço da aplicação : https://brenomendesmoura.github.io/UNI.LIBRARY-Projeto_Semestral/
+### Endereço da aplicação: 
