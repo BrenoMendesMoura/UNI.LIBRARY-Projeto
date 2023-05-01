@@ -66,11 +66,11 @@ request.send();
 ```
   
 <br>
- Consequentemente deverá manipular essa informação e navegar utilizando .map para definir as variáveis que deverá aparecer no site.
+| Consequentemente deverá manipular essa informação e navegar utilizando .map para definir as variáveis que deverá aparecer no site.
  <br>
- Essa é uma das ideias iniciais ao desenvolver, uma maneira simples de explicar a requisição por trás,
+| Essa é uma das ideias iniciais ao desenvolver, uma maneira simples de explicar a requisição por trás,
  <br>
- Mas o script utilizado dentro do projeto vai um pouco além disso.
+| Mas o script utilizado dentro do projeto vai um pouco além disso.
   
   
 
