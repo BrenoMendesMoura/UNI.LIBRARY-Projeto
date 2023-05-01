@@ -24,7 +24,7 @@ UNI.LIBRARY, uma biblioteca digital especializada em Animes. Utilizando a mesma 
   No site nós retornamos informações relevantes para o mundo GEEK, como por exemplo:
   - EM ALTA, animes promovidos pela API e retornando em formato de vídeo;
   - ANIMES POPULARES, retornando os 30 animes com mais membros no forum do my anime list;
-  - TOP 10 animes do momento;
+  - TOP 10 ANIMES, retorna os animes mais votados do momento;
   - ANIMES RECOMENDADOS, animes com as melhores avaliações do my anime list;
   - NOVIDADES, retornamos em formato de vídeo os animes recentes e mais visualizados do YOUTUBE.
   
