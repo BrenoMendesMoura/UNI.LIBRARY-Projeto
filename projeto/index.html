@@ -31,19 +31,19 @@
             <nav class="navbar ">
                 <b><a class="navbar-brand text-white" style="margin-top: 3%;">UNI.LIBRARY</a></b>
                 <div class="container d-flex">
-                    <a class="text-start text-white ms-auto" style="margin-top: 3%;" id="EmAlta">Em Alta</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;"
+                    <a class="text-start text-white ms-auto" style="margin-top: 3%; cursor: pointer;" id="EmAlta">Em Alta</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
                         id="Populares">Populares</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;" id="Top10">Top 10</a>
-                    <a class="text-start text-white ms-auto" style="margin-top: 3%;" id="Recomendados">Recomendações</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;" id="Novidades">Novidades</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Top10">Top 10</a>
+                    <a class="text-start text-white ms-auto" style="margin-top: 3%;cursor: pointer;" id="Recomendados">Recomendações</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Novidades">Novidades</a>
                     
 
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;" id="Descubra">Descubra ++</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Descubra">Descubra ++</a>
 
                     <form class="d-flex" role="search" id="search_form" style="margin-top: 3%; ">
-                        <input class="form-control col-md-9 offset-md-7 bg-transparent text-white" type="search"
-                            placeholder="PESQUISE AQUI!!" aria-label="Search" name="search" id="search">
+                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="search"
+                            placeholder="PESQUISE" aria-label="Search" name="search" id="search">
 
                         <label class="btn btn-outline-light" type="submit" for="search" style="margin-left: 1%;"><i
                                 class="fa fa-search white"></i></label>
@@ -313,7 +313,7 @@
                         let displayedResults = [];
 
                         function getJikanResults() {
-                            fetch('https://api.jikan.moe/v4/random/anime?rated=g,pg&limit=10')
+                            fetch('https://api.jikan.moe/v4/random/anime?&genre_exclude=18,43')
                                 .then(response => response.json())
                                 .then(data => {
                                     const result = data.data;
