@@ -7,7 +7,7 @@ function searchAnime(event) {
   const form = new FormData(this);
   const query = form.get("search");
 
-  fetch(`${base_url}/anime?q=${query}&page=1&rated=g,pg`)
+  fetch(`${base_url}/anime?q=${query}&page=1`)
     .then(res => res.json())
     .then(updateDom)
     .catch(err => console.warn(err.message));
