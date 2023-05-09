@@ -47,12 +47,16 @@
                     <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
                         id="Descubra">Descubra ++</a>
 
+                        
+                            
                                 <form id="search_form" class="d-flex" style="margin-top: 3%; ">
                                         <div class="input-field">
                                             <input placeholder="Anime" name="search" id="search" type="text" class="validate form-control form-control col-md-6 offset-md-7 bg-transparent text-white">
                                             <label for="search"></label>
                                     </div>
                                 </form>
+                           
+                        
 
                     <!--
  <div class="container ">
@@ -75,7 +79,7 @@
                     <!--Scroll's para tópicos específicos
                     <script>
                         const searchBtn = document.getElementById("pesquisa-anime");
-                        searchBtn.addEventListener("search", function (event) {
+                        searchBtn.addEventListener("text", function (event) {
                             event.preventDefault();
 
                             const searchResults = document.getElementById("ponto");
@@ -429,9 +433,10 @@
 
 
 
+
         <div class="teste-espaco overflow-auto">
             <div class="category" id="scroll-resultados">
-                <div class="slider-resultado" id="search-results-a" style="margin-top: 1%">
+                <div class="slider-resultado" id="search-results" style="margin-top: 1%">
                 </div>
 
             </div>
