@@ -46,42 +46,27 @@
 
                     <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
                         id="Descubra">Descubra ++</a>
-                <div>
-                    <form class="d-flex" role="search" id="search_form" style="margin-top: 3%; ">
-                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="text" placeholder="PESQUISE" aria-label="Search" name="search" id="search">
+               
+                    <form class="d-flex" id="search_form" style="margin-top: 3%; ">
                         
-                        <label for="search"></label>
+                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="search" placeholder="pesquise" name="search" id="search">
+                    
+                        <label for="search" id="teste-pesquisa"></label>
+                    
                     </form>
-                </div>
-                    <!--
- <div class="container ">
-      <div class="row center">
 
-          <form id="search_form" class="col-md-4 offset-md-2">
-              <div class="row">
-                  <div class="input-field col s9">
 
-                      <input placeholder="Anime" name="search" id="search" type="text" class="validate form-control form-control-lg col-md-6 offset-md-6 text-center">
-                      <label for="search" class="col-md-8 offset-md-8 text-center"></label>
-
-                  </div>
-              </div>
-          </form>
-
-      </div>
-  </div>
-                    -->
-                    <!--Scroll's para tópicos específicos
+                    <!--Scroll's para tópicos específicos-->
                     <script>
-                        const searchBtn = document.getElementById("pesquisa-anime");
-                        searchBtn.addEventListener("text", function (event) {
+                        const searchBtn = document.getElementById("search");
+                        searchBtn.addEventListener("search", function (event) {
                             event.preventDefault();
 
                             const searchResults = document.getElementById("ponto");
                             searchResults.scrollIntoView({ behavior: "smooth" });
                         });
 
-                    </script>-->
+                    </script>
 
                     <!--Scroll | Em Alta -->
                     <script>
