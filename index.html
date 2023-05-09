@@ -32,25 +32,31 @@
             <nav class="navbar ">
                 <b><a class="navbar-brand text-white" style="margin-top: 3%;">UNI.LIBRARY</a></b>
                 <div class="container d-flex">
-                    <a class="text-start text-white ms-auto" style="margin-top: 3%; cursor: pointer;" id="EmAlta">Em Alta</a>
+                    <a class="text-start text-white ms-auto" style="margin-top: 3%; cursor: pointer;" id="EmAlta">Em
+                        Alta</a>
                     <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
                         id="Populares">Populares</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Top10">Top 10</a>
-                    <a class="text-start text-white ms-auto" style="margin-top: 3%;cursor: pointer;" id="Recomendados">Recomendações</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Novidades">Novidades</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
+                        id="Top10">Top 10</a>
+                    <a class="text-start text-white ms-auto" style="margin-top: 3%;cursor: pointer;"
+                        id="Recomendados">Recomendações</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
+                        id="Novidades">Novidades</a>
+
+
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
+                        id="Descubra">Descubra ++</a>
+               
+                    <form class="d-flex" id="search_form" style="margin-top: 3%; ">
+                        
+                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="search" placeholder="pesquise" name="search" id="search">
                     
-
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Descubra">Descubra ++</a>
-
-                    <form class="d-flex" role="search" id="search_form" style="margin-top: 3%; ">
-                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="search"
-                            placeholder="PESQUISE" aria-label="Search" name="search" id="search">
-
-                        <label class="btn btn-outline-light" type="submit" for="search" style="margin-left: 1%;"><i
-                                class="fa fa-search white"></i></label>
-
+                        <label for="search" id="teste-pesquisa"></label>
+                    
                     </form>
-                    <!--Scroll's para tópicos específicos
+
+
+                    <!--Scroll's para tópicos específicos-->
                     <script>
                         const searchBtn = document.getElementById("search");
                         searchBtn.addEventListener("search", function (event) {
@@ -58,7 +64,7 @@
 
                             const searchResults = document.getElementById("ponto");
                             searchResults.scrollIntoView({ behavior: "smooth" });
-                        });-->
+                        });
 
                     </script>
 
@@ -134,7 +140,7 @@
                         });
 
                     </script>
-                    
+
 
                 </div>
             </nav>
@@ -409,7 +415,7 @@
 
         <div class="teste-espaco overflow-auto">
             <div class="category" id="scroll-resultados">
-                <div class="slider-resultado" id="search-results-a" style="margin-top: 1%">
+                <div class="slider-resultado" id="search-results" style="margin-top: 1%">
                 </div>
 
             </div>
