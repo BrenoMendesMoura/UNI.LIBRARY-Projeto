@@ -32,26 +32,48 @@
             <nav class="navbar ">
                 <b><a class="navbar-brand text-white" style="margin-top: 3%;">UNI.LIBRARY</a></b>
                 <div class="container d-flex">
-                    <a class="text-start text-white ms-auto" style="margin-top: 3%; cursor: pointer;" id="EmAlta">Em Alta</a>
+                    <a class="text-start text-white ms-auto" style="margin-top: 3%; cursor: pointer;" id="EmAlta">Em
+                        Alta</a>
                     <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
                         id="Populares">Populares</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Top10">Top 10</a>
-                    <a class="text-start text-white ms-auto" style="margin-top: 3%;cursor: pointer;" id="Recomendados">Recomendações</a>
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Novidades">Novidades</a>
-                    
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
+                        id="Top10">Top 10</a>
+                    <a class="text-start text-white ms-auto" style="margin-top: 3%;cursor: pointer;"
+                        id="Recomendados">Recomendações</a>
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
+                        id="Novidades">Novidades</a>
 
-                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;" id="Descubra">Descubra ++</a>
+
+                    <a class="text-start text-white" style="margin-top: 3%; margin-right: 5px;cursor: pointer;"
+                        id="Descubra">Descubra ++</a>
 
                     <form class="d-flex" role="search" id="search_form" style="margin-top: 3%; ">
-                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="search"
-                            placeholder="PESQUISE" aria-label="Search" name="search" id="search">
-
+                        <input class="form-control col-md-6 offset-md-7 bg-transparent text-white" type="text" placeholder="PESQUISE" aria-label="Search" name="search" id="search">
                         
-
+                        <label for="search" id="pesquisa-anime" ></label>
                     </form>
+
+                    <!--
+ <div class="container ">
+      <div class="row center">
+
+          <form id="search_form" class="col-md-4 offset-md-2">
+              <div class="row">
+                  <div class="input-field col s9">
+
+                      <input placeholder="Anime" name="search" id="search" type="text" class="validate form-control form-control-lg col-md-6 offset-md-6 text-center">
+                      <label for="search" class="col-md-8 offset-md-8 text-center"></label>
+
+                  </div>
+              </div>
+          </form>
+
+      </div>
+  </div>
+                    -->
                     <!--Scroll's para tópicos específicos-->
                     <script>
-                        const searchBtn = document.getElementById("search");
+                        const searchBtn = document.getElementById("pesquisa-anime");
                         searchBtn.addEventListener("search", function (event) {
                             event.preventDefault();
 
@@ -133,7 +155,7 @@
                         });
 
                     </script>
-                    
+
 
                 </div>
             </nav>
